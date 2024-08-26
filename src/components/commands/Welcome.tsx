@@ -2,7 +2,6 @@ import {
   Cmd,
   HeroContainer,
   Link,
-  PreImg,
   PreName,
   PreNameMobile,
   PreWrapper,
@@ -60,7 +59,7 @@ const Welcome: React.FC = () => {
         <Seperator>----</Seperator>
         <div>
           This project's source code can be found in this project's{" "}
-          <Link href="https://github.com/satnaing/terminal-portfolio">
+          <Link href="https://github.com/sahejmultani/terminal-portfolio-site/tree/main">
             GitHub repo
           </Link>
           .
@@ -71,27 +70,7 @@ const Welcome: React.FC = () => {
         </div>
       </div>
       <div className="illu-section">
-        <PreImg>
-          {`
-                       ,##,,eew,
-                     ,##############C
-                  a###############@##
-                 7####^\`^"7W7^"@####
-                 @#@b\`         ^@#@^
-                  ##^,,,,   ,,,,^#^
-                 ,,@######"#######=
-                  .''555"\` '5555b|
-                  T"@  ,,,^,mg,@,*
-                     %p||\`~~'.#\`
-                      ^Wp  ,#T
-                     :b''@@b^}
-                  ,^     \` 'b 3-
-              .<\` 'p   ^v   #   b   *.
-            {      }   #"GpGb   [
-            C      3 * @#######Nl      \`
-           '            ^@##b     ($    !
-         `}
-        </PreImg>
+        
       </div>
     </HeroContainer>
   );
