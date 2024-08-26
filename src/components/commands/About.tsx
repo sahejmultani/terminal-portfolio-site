@@ -11,8 +11,8 @@ const About: React.FC = () => {
         Hi, my name is <HighlightSpan>Sahej Multani</HighlightSpan>!
       </p>
       <p>
-        I'm <HighlightAlt>a full-stack developer</HighlightAlt> based in Yangon,
-        Myanmar.
+        I'm <HighlightAlt>a Computer Software Engineering</HighlightAlt> student at the University of Western Ontario
+        graduating in the class of 2025 .
       </p>
       <p>
         I am passionate about writing codes and <br />
