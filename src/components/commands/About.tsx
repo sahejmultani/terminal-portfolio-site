@@ -24,7 +24,8 @@ const About: React.FC = () => {
 
         <br />
         In my free time I enjoy playing basketball and volleyball and recently started getting more into cultural <br />
-        culturual dancing (bhangra). If you ever need an extra player on your team I'll be there and guarantee a win lol
+        culturual dancing (bhangra). If you ever need an extra player on your team I'll be there and guarantee a win <br/>
+        I would love to get in touch! Send me an email by using the "email" command!
         </p>
     </AboutWrapper>
   );
