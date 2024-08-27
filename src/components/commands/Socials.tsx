@@ -27,7 +27,7 @@ const Socials: React.FC = () => {
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
-    isArgInvalid(arg, "go", ["1", "2",]) ? (
+    isArgInvalid(arg, "go", ["1", "2", "3", "4"]) ? (
       <Usage cmd="socials" />
     ) : null;
 

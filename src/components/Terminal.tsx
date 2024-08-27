@@ -40,7 +40,7 @@ export const commands: Command = [
   { cmd: "socials", desc: "check out my social accounts", tab: 6 },
   { cmd: "themes", desc: "check available themes", tab: 7 },
   { cmd: "welcome", desc: "display hero section", tab: 6 },
-  { cmd: "whoami", desc: "about current user", tab: 7 },
+  { cmd: "whoami", desc: "about current user", tab: 7 }, //change to resume download
 ];
 
 type Term = {
