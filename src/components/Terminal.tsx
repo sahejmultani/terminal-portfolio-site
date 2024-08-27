@@ -13,7 +13,8 @@ import {
   Wrapper,
 } from "./styles/Terminal.styled";
 import { argTab } from "../utils/funcs";
-import { downloadResume } from "./commands/Resume";
+import { viewResume } from "./commands/Resume";
+import Blog from "./commands/Blog";
 
 type Command = {
   cmd: string;
@@ -24,18 +25,19 @@ type Command = {
 export const commands: Command = [
   { cmd: "about", desc: "about Sahej Multani", tab: 8 },
   { cmd: "clear", desc: "clear the terminal", tab: 8 },
-  { cmd: "echo", desc: "print out anything", tab: 9 },
+  { cmd: "echo", desc: "print out anything (e.g. echo you got the job!)", tab: 9 },
   { cmd: "education", desc: "my education background", tab: 4 },
-  { cmd: "email", desc: "send an email to me", tab: 8 },
-  { cmd: "experience", desc: "my academic/professional experience", tab: 3 },
+  { cmd: "email", desc: "reach out to me via email", tab: 8 },
+  { cmd: "experience", desc: "my academic/professional experiences", tab: 3 },
   { cmd: "help", desc: "check available commands", tab: 9 },
   { cmd: "history", desc: "view command history", tab: 6 },
   { cmd: "projects", desc: "view projects that I've coded", tab: 5 },
   { cmd: "socials", desc: "check out my social accounts", tab: 6 },
   { cmd: "themes", desc: "check available themes", tab: 7 },
-  { cmd: "welcome", desc: "display hero section", tab: 6 },
+  { cmd: "welcome", desc: "display welcome banner", tab: 6 },
   { cmd: "whoami", desc: "about current user", tab: 7 },
-  { cmd: "resume", desc: "download resume", tab: 7 }, // Add resume command
+  { cmd: "resume", desc: "download resume", tab: 7 },
+  { cmd: "blog", desc: "find out more about me", tab: 9 }
 ];
 
 type Term = {
@@ -78,11 +80,6 @@ const Terminal = () => {
     setRerender(true);
     setHints([]);
     setPointer(-1);
-
-    // Check if the command is "resume"
-    if (inputVal.trim().toLowerCase() === "resume") {
-      downloadResume(); // Call the download function
-    }
   };
 
   const clearHistory = () => {
@@ -236,6 +233,9 @@ const Terminal = () => {
               <CmdNotFound data-testid={`not-found-${index}`}>
                 command not found: {cmdH}
               </CmdNotFound>
+            )}
+            {cmdH.trim() === "blog" && (
+              <Blog /> // Render the Blog message
             )}
           </div>
         );

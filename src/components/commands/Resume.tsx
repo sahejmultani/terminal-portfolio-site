@@ -1,4 +1,4 @@
-export const downloadResume = () => {
+export const viewResume = () => {
     const link = document.createElement("a");
     const fileURL = "https://drive.google.com/file/d/1saujzosrQ3xcldRgv5bayPz0h97jbPJC/view?usp=sharing"; // Ensure this path is correct
     window.open(fileURL, "_blank");

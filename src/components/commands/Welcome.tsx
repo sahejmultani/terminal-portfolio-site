@@ -66,7 +66,7 @@ const Welcome: React.FC = () => {
         </div> */}
         <Seperator>----</Seperator>
         <div>
-          For a list of available commands, type `<Cmd>help</Cmd>`.
+          For a list of available commands, type `<Cmd>help</Cmd>`. Remember, the commands are case sensitive.
         </div>
       </div>
       <div className="illu-section">

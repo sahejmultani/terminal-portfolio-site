@@ -22,6 +22,7 @@ const Help: React.FC = () => {
         <div>Tab or Ctrl + i&nbsp; =&gt; autocompletes the command</div>
         <div>Up Arrow {generateTabs(5)} =&gt; go back to previous command</div>
         <div>Ctrl + l {generateTabs(5)} =&gt; clear the terminal</div>
+        <div>Remember, the commands are case sensitive</div>
       </KeyContainer>
     </HelpWrapper>
   );
