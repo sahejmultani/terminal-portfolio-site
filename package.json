@@ -2,7 +2,11 @@
   "name": "terminal-portfolio",
   "private": true,
   "version": "1.3.1",
+  "homepage": "https://sahejmultani.github.io/terminal-portfolio-site",
+
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
