@@ -140,6 +140,7 @@ const Terminal = () => {
     if (ctrlL) {
       clearHistory();
     }
+    
 
     // Go previous cmd
     if (e.key === "ArrowUp") {
