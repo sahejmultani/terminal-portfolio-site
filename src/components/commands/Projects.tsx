@@ -41,10 +41,25 @@ const Projects: React.FC = () => {
       <ProjectsIntro>
         Check out some of my projects!
       </ProjectsIntro>
-      {projects.map(({ id, title, desc, features }) => (
+
+      {projects.map(({ id, title, desc, features, demo }) => (
         <ProjectContainer key={id}>
           <ProjectTitle>{`${id}. ${title}`}</ProjectTitle>
+
           <ProjectDesc>{desc}</ProjectDesc>
+
+          {demo && (
+            <p>
+              <a
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🎥 Watch Demo
+              </a>
+            </p>
+          )}
+
           {features.length > 0 && (
             <ul>
               {features.map((feature, index) => (
@@ -58,65 +73,83 @@ const Projects: React.FC = () => {
   );
 };
 
-// Updated projects array with features as arrays
 const projects = [
   {
     id: 1,
     title: "RouteIQ – Geotab Hackathon",
-    desc: "A data-driven risk analysis and route optimization platform built using telematics data.",
+    desc: "A full-stack fleet analytics platform built during the Geotab Hackathon that transforms raw telematics data into actionable insights through risk analysis, route optimization, and interactive visualizations.",
     features: [
-      "Developed a data-driven risk analysis platform using Python, FastAPI, and Next.js to process, analyze, and visualize large telematics datasets, generating actionable operational insights.",
-      "Built analytical services for risk scoring, route optimization, and large-scale data processing using Python and multithreaded backend architecture to support data-driven decision making."
+      "Developed a full-stack application using Python, FastAPI, and Next.js to process, analyze, and visualize thousands of telematics records from connected vehicles.",
+      "Built backend services that generated driver risk scores by analyzing speeding events, harsh braking, rapid acceleration, and other driving behaviors.",
+      "Implemented multithreaded data processing pipelines to improve performance when handling large datasets.",
+      "Designed dashboards that converted complex fleet data into easy-to-understand charts, summaries, and route visualizations.",
+      "Collaborated in an agile hackathon environment using Git to rapidly prototype, test, and deliver a functional solution within a limited timeframe."
     ],
+    demo: "https://www.youtube.com/watch?v=dE6vCrii8gE&feature=youtu.be",
     tab: 2,
   },
   {
     id: 2,
     title: "AeroGrow – Autonomous Agricultural Drone",
-    desc: "A capstone project focused on autonomous agricultural monitoring and crop health analysis.",
+    desc: "A fourth-year engineering capstone project focused on developing an autonomous drone capable of monitoring crop health, collecting environmental data, and supporting precision agriculture.",
     features: [
-      "Collaborated with my capstone team to configure and optimize flight systems using SpeedyBee, iNav, and BN880 GPS, ensuring 90% waypoint accuracy and stable autonomous operation.",
-      "Designed the image processing system, leveraging Python and OpenCV, to analyze onboard camera footage and detect soybean crop health using morphological processing with 70% accuracy."
+      "Configured and optimized the autonomous flight system using SpeedyBee, iNav, and BN880 GPS hardware, achieving approximately 90% waypoint accuracy.",
+      "Designed the computer vision pipeline using Python and OpenCV to analyze captured images and identify unhealthy soybean crops.",
+      "Applied image preprocessing, thresholding, and morphological operations to improve plant health detection with approximately 70% accuracy.",
+      "Integrated onboard cameras and environmental sensors to automate field monitoring and reduce the need for manual crop inspections.",
+      "Worked closely with a multidisciplinary engineering team to combine embedded systems, autonomous navigation, and computer vision into a single solution."
     ],
     tab: 2,
   },
   {
     id: 3,
     title: "NBA Stat Tracker",
-    desc: "A web application for tracking and managing NBA statistics.",
+    desc: "A full-stack web application that allows users to browse, search, and manage NBA player, team, and game statistics through a responsive interface.",
     features: [
-      "Utilized React.js, Node.js, and Express to create a responsive web app for an NBA database and implemented RESTful APIs for seamless UI-database communication achieving a 99.9% uptime.",
-      "Engineered MySQL DBMS with normalized tables to effectively store and manage NBA statistics, ensuring data integrity and efficient retrieval with queries with response times optimized to under 100ms."
+      "Developed the frontend using React.js and built RESTful APIs with Node.js and Express for seamless communication between the client and server.",
+      "Designed a normalized MySQL database to efficiently store player statistics, team information, game results, and historical data.",
+      "Implemented CRUD functionality that allows users to add, edit, delete, and search statistical records.",
+      "Optimized SQL queries and indexing to achieve response times under 100ms for frequently accessed data.",
+      "Created reusable React components and responsive layouts to improve scalability, maintainability, and user experience."
     ],
     tab: 2,
   },
   {
     id: 4,
     title: "Katch-Up (Chat App)",
-    desc: "A chat application for real-time communication.",
+    desc: "A command-line, real-time chat application built in C++ that enables multiple users to communicate through a client-server architecture using socket programming.",
     features: [
-      "Engineered the server-side components of a real-time CLI chat application in C++, focusing on optimizing message routing for Linux and implemented methods to ensure all communication is efficient.",
-      "Used socket programming techniques to establish a robust communication infrastructure, allowing users to exchange messages seamlessly and reduced latency by 50%."
+      "Developed the backend server in C++ to efficiently manage multiple client connections simultaneously.",
+      "Implemented TCP socket programming on Linux to establish reliable real-time communication between connected users.",
+      "Designed message routing logic that ensured fast and efficient communication between multiple chat clients.",
+      "Optimized networking performance, reducing overall communication latency by approximately 50% during testing.",
+      "Strengthened knowledge of operating systems, concurrency, multithreading, and low-level network programming."
     ],
     tab: 2,
   },
   {
     id: 5,
     title: "Superhero App",
-    desc: "A superhero wiki-style application for creating and sharing hero profiles.",
+    desc: "A MERN stack web application that allows users to create, manage, and share superhero profiles while providing secure user authentication.",
     features: [
-      "Using MERN stack, used JWT tokens and React for the front end while creating a robust backend with Node.js and Express.",
-      "Used MongoDB to manage, authenticate, and hash user data with the help of bcrypt."
+      "Built the application using MongoDB, Express.js, React, and Node.js following a full-stack architecture.",
+      "Implemented secure authentication using JWT and protected routes to ensure only authenticated users could access private features.",
+      "Used bcrypt to securely hash and store user passwords within MongoDB.",
+      "Developed complete CRUD functionality for creating, updating, deleting, and viewing superhero profiles.",
+      "Designed reusable React components and RESTful APIs to create a responsive, scalable, and maintainable application."
     ],
     tab: 2,
   },
   {
     id: 6,
     title: "Weather App",
-    desc: "A weather application with an interactive world map.",
+    desc: "A real-time weather application that combines interactive maps, live search, and weather APIs to provide current forecasts for locations worldwide.",
     features: [
-      "Using a Python and Flask backend, integrated OpenWeatherMap API to provide real-time forecasts and optimized data processing by 30% for enhanced accuracy and user experience.",
-      "Developed an interactive, user-friendly map with Leaflet and JavaScript, featuring live city suggestions and AJAX-based data updates for seamless weather information retrieval."
+      "Built the backend using Python and Flask while integrating the OpenWeatherMap API to retrieve real-time weather information.",
+      "Optimized backend data processing by approximately 30%, improving response speed and application performance.",
+      "Developed an interactive world map using Leaflet.js that allows users to quickly explore weather conditions by location.",
+      "Implemented AJAX requests and live city autocomplete for seamless weather updates without page reloads.",
+      "Displayed current conditions, temperature, humidity, wind speed, and forecast information through a clean and responsive interface."
     ],
     tab: 2,
   },
