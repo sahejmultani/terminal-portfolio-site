@@ -7,25 +7,35 @@ import {
 const About: React.FC = () => {
   return (
     <AboutWrapper data-testid="about">
-      <p>
-        Hi, my name is <HighlightSpan>Sahej Multani</HighlightSpan>!
-      </p>
-      <p>
-        I'm a<HighlightAlt> Computer Software Engineering</HighlightAlt> student at the University of Western Ontario
-        graduating in the class of 2025.
-      </p>
-      <p>
-        I am a skilled software engineer, with most of my experience falling in full-stack development but <br />
-        also am highly proficient in embedded systems development and data engineering. From my academic and <br />
-        professional experiences, I bring a great understanding in many aspects such as end-to-end software <br />
-        development, agile methodologies, technology, and more. Combined with a resiliancy and passion to be <br />
-        as effective as possible and an eager learner, I will showcase my talents and become an effective<br />
-        member of any team!<br /> 
+        <p>
+          Hi, my name is <HighlightSpan>Sahej Multani</HighlightSpan>!
+        </p>
 
-        <br />
-        In my free time I enjoy playing basketball and volleyball and recently started getting more into cultural <br />
-        culturual dancing (bhangra). If you ever need an extra player on your team I'll be there and guarantee a win <br/>
-        I would love to get in touch! Send me an email by using the "email" command!
+        <p>
+          I recently graduated from the University of Western Ontario with a
+          degree in <HighlightAlt>Computer Engineering</HighlightAlt> (Class of 2025).
+        </p>
+
+        <p>
+          I’m a software engineer focused on full-stack development, embedded systems,
+          and data-driven applications. I’m also interested in data engineering and
+          embedded systems, and I enjoy building scalable systems that connect software
+          with real-world impact — from backend infrastructure to hardware-level
+          programming and data platforms.
+          <br />
+          <br />
+          I love working with new technologies and building things from the ground up.
+          Through my academic and professional experience, I’ve developed strong skills
+          in end-to-end software development, Agile workflows, and collaborating in
+          cross-functional teams.
+          <br />
+          <br />
+          Outside of work, I enjoy playing basketball and volleyball, playing chess,
+          and recently getting into cultural dancing (Bhangra). I like anything that
+          combines strategy, teamwork, or rhythm.
+          <br />
+          <br />
+          I’d love to connect — feel free to reach out using the "email" command!
         </p>
     </AboutWrapper>
   );
