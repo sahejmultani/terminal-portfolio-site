@@ -1,8 +1,9 @@
 export const viewResume = () => {
-  const fileURL = "https://drive.google.com/file/d/1BGLxRGDydQkaFaLh5IwdYwijp9dYhyEP/view"; // Ensure this path is correct
+  const fileURL = "https://drive.google.com/file/d/1BGLxRGDydQkaFaLh5IwdYwijp9dYhyEP/view";
 
-  // Open the URL in a new tab
-  window.open(fileURL, "_blank");
+  console.log("Attempting to open:", fileURL);
 
-  console.log("Attempting to open:", fileURL); // Debugging line
+  window.open(fileURL, "_blank", "noopener,noreferrer");
+
+  return ("Resume Link: " + fileURL);
 };
