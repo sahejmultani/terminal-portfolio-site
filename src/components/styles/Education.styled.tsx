@@ -14,8 +14,12 @@ export const EduList = styled.div`
 
   .desc {
     color: ${({ theme }) => theme.colors?.text[200]};
+    white-space: pre-line;
   }
-     .position {
+
+  .position {
     color: ${({ theme }) => theme.colors?.text[200]};
   }
 `;
+
+

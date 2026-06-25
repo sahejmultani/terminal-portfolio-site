@@ -18,7 +18,8 @@ const Education: React.FC = () => {
 const eduBg = [
   {
     title: "Bachelor of Engineering Science in Computer Engineering",
-    desc: "University of Western Ontario | 2020 ~ 2025",
+    desc: "University of Western Ontario | 2020 ~ 2025 \n- Western Engineering Trillium Hyperloop, Western Sikh Students Association, Western Cultural Dance Company"
+    
   },
   {
     title: "High School Diploma",
