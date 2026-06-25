@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/terminal-portfoio-site/sw.js', { scope: '/terminal-portfoio-site/' })})}
